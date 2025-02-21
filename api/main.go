@@ -1,9 +1,10 @@
 package main
 
 import (
-	"Example/RestAPI/internal/app/api"
 	"fmt"
 	"log"
+
+	"github.com/shegai01/Example-RestAPI/internal/app/api"
 
 	"github.com/BurntSushi/toml"
 )

@@ -1,4 +1,4 @@
-module github.com/sheiga01/Example/RestAPI
+module github.com/shegai01/Example-RestAPI
 
 go 1.22.2
 
