@@ -23,7 +23,12 @@ internal/app/app_name/app_name.
 go
 
 !!! 5 !!! важный пункт кофигурации 
+базово нужен только порт
+internal/app/api/config.go
 
 6. Создадим конфиг
 --- config/app_name.toml/.env
-7.
+
+7. как передавать конфиги?
+- хочется передавать через флаг
+
