@@ -22,5 +22,6 @@ func NewAPI(config *Config) *API {
 
 // start http sercer/confirue, router, database
 func (api *API) Start() error {
+	api.configureLoggerField()
 	return nil
 }

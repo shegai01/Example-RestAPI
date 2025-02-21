@@ -19,8 +19,11 @@ cmd/app_name/main.go
 
 4. инициализация сервера
 
-internal/app/app_name/app_name.go
-
+internal/app/app_name/app_name.
+go
 
 !!! 5 !!! важный пункт кофигурации 
 
+6. Создадим конфиг
+--- config/app_name.toml/.env
+7.

@@ -3,7 +3,7 @@ package api
 // general instance for API server of REST application
 type Config struct {
 	// port
-	BindAddr string
+	BindAddr string `toml:"bind_addr"`
 	//logger level
 	LoggerLevel string `toml:"logger_level"`
 }
