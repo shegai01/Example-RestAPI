@@ -1,6 +1,9 @@
 package api
 
 import (
+	"net/http"
+
+	"github.com/gorilla/mux"
 	"github.com/sirupsen/logrus"
 )
 
@@ -9,6 +12,7 @@ type API struct {
 	// unexported feild !!
 	config *Config
 	logger *logrus.Logger
+	router *mux.Router
 }
 
 // API constructor build API instance
@@ -16,6 +20,7 @@ func NewAPI(config *Config) *API {
 	return &API{
 		config: config,
 		logger: logrus.New(),
+		router: mux.NewRouter(),
 	}
 
 }
@@ -23,5 +28,9 @@ func NewAPI(config *Config) *API {
 // start http sercer/confirue, router, database
 func (api *API) Start() error {
 	api.configureLoggerField()
-	return nil
+	//configure router
+	api.configureRouterFeild()
+	// start http-server
+	api.logger.Info("starting api server at port: ", api.config.BindAddr)
+	return http.ListenAndServe(api.config.BindAddr, api.router)
 }
