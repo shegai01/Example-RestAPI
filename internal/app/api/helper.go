@@ -3,6 +3,7 @@ package api
 import (
 	"net/http"
 
+	"github.com/shegai01/Example-RestAPI/storage"
 	"github.com/sirupsen/logrus"
 )
 
@@ -23,4 +24,12 @@ func (api *API) configureRouterFeild() {
 	})
 }
 
-//try configure storage
+// try configure storage
+func (api *API) configureStorageFeild() error {
+	storage := storage.New(api.config.Storage)
+	if err := storage.Open(); err != nil {
+		return err
+	}
+	api.storage = storage
+	return nil
+}
