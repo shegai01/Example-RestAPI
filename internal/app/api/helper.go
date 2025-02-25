@@ -22,3 +22,5 @@ func (api *API) configureRouterFeild() {
 		w.Write([]byte("hello world this is api"))
 	})
 }
+
+//try configure storage
