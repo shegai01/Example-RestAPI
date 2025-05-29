@@ -4,12 +4,12 @@ import (
 	"database/sql"
 	"log"
 
-	_ "github.com/lib/pq"
+	_ "github.com/lib/pq" //
 )
 
 type Storage struct {
 	config *Config
-	db     *sql.DB
+	db     *sql.DB //filedescriptor
 }
 
 func NewStorage(config *Config) *Storage {

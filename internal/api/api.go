@@ -5,7 +5,7 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/shegai01/server_db/storage"
+	"github.com/shegai01/Example-RestAPI/storage"
 	"github.com/sirupsen/logrus"
 )
 

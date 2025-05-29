@@ -6,7 +6,7 @@ import (
 	"log"
 
 	"github.com/BurntSushi/toml"
-	"github.com/shegai01/server_db/internal/app/api"
+	"github.com/shegai01/Example-RestAPI/internal/api"
 )
 
 var (

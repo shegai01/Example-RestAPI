@@ -1,5 +1,10 @@
 package storage
 
-type StorageConfig struct {
+type Config struct {
 	DataBaseURI string `toml:"database_uri"`
+}
+
+func NewConfig() *Config {
+	return &Config{}
+
 }
